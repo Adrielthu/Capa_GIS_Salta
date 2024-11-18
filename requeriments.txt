@@ -1,0 +1,11 @@
+geopandas
+dask
+dask-geopandas
+shapely
+tqdm
+numpy
+pandas
+python-Levenshtein
+requests
+unidecode
+shapefile

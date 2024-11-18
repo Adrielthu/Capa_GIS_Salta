@@ -1,0 +1,10 @@
+0_Parcels/data/buildings/buildings.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/buildings/clipped_buildings.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/houses/Houses.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/NBI/NBI_Clasificados.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/neighborhood/Barrios_Salta.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/neighborhood/Radiosprecensales2021/(octubre/).* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/perimeter/limite_conso.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/941_buildings.csv filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/buildings/buildings-2015-3D.* filter=lfs diff=lfs merge=lfs -text
+0_Parcels/data/buildings/buildingsWithMissings.* filter=lfs diff=lfs merge=lfs -text
