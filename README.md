@@ -1,57 +1,127 @@
+# 📌 Sobre el Proyecto
+
 > [!IMPORTANT]
-> Este proyecto fue realizado en colaboración con una institución académica y está basado en un caso real de análisis geoespacial sobre la ciudad de Salta Capital.  
-> Aunque el trabajo se desarrolló con fines académicos y simula una aplicación en un contexto profesional, **el código es libre y puede ser reutilizado o adaptado con fines educativos o personales.**  
->  
-> 🧠 **Resumen del proyecto:** Se desarrolló un sistema de información geográfica (GIS) en Python para analizar la propagación de la Tuberculosis, aplicando técnicas de limpieza, normalización y transformación de datos geográficos.
+> Este proyecto fue realizado en colaboración con una institución académica y está basado en un caso real de análisis geoespacial sobre la ciudad de **Salta Capital**.  
+> Aunque este trabajo se desarrolló con fines académicos y simula una aplicación en un contexto profesional, **el código es libre y puede ser reutilizado o adaptado con fines educativos o personales.**
 
+---
 
-# Pasos importantes para la correcta ejecución de los scripts
+🧠 **¿De qué se trata este proyecto?**  
+Se desarrolló un **Sistema de Información Geográfica (GIS)** en Python para modelar la propagación de la tuberculosis. El proceso incluyó recolección, limpieza, normalización y análisis de datos geoespaciales.
 
-## Librerías requeridas:
-    - GeoPandas: Para el manejo de datos geoespaciales y la conversión de geometrías.
-    - Dask y Dask-GeoPandas: Para manejar grandes volúmenes de datos de manera eficiente y en paralelo.
-    - Shapely: Para la manipulación y creación de geometrías.
-    - tqdm: Para mostrar una barra de progreso durante la generación de puntos.
-    - numpy: Para realizar operaciones matemáticas y manejar arreglos multidimensionales.
-    - pandas: Para la manipulación y análisis de datos.
-    - Levenshtein: Para calcular la distancia de Levenshtein, que mide la diferencia entre dos secuencias de caracteres.
-    - requests: Para hacer solicitudes HTTP de manera sencilla.
-    - unidecode: Para convertir texto Unicode a ASCII, eliminando acentos y otros caracteres especiales.
+🎯 **¿Para qué sirve esta capa GIS?**  
+La capa modela la distribución de viviendas, edificios y lugares muy concurridos (restaurantes, gimnasios, etc) en Salta, junto con indicadores socioeconómicos. Esto ayuda a tomar decisiones en base a datos reales.
 
-## Creación del entorno virtual en Python para Windows:
+---
 
-1. Si tenes Python 3:
-```
+# 🛠️ Tecnologías y Herramientas
+
+<details>
+<summary>📦 Librerías y dependencias</summary>
+
+- **GeoPandas**: Para el manejo de datos geoespaciales y la conversión de geometrías.
+- **Dask + Dask-GeoPandas**: Para manejar grandes volúmenes de datos en paralelo.
+- **Shapely**: Para crear y manipular geometrías.
+- **tqdm**: Barra de progreso durante la generación de puntos.
+- **NumPy**: Operaciones matemáticas y arrays.
+- **Pandas**: Manipulación y análisis de datos.
+- **Levenshtein**: Para medir similitudes entre textos.
+- **requests**: Para hacer solicitudes HTTP.
+- **unidecode**: Limpieza de texto eliminando acentos y caracteres especiales.
+
+</details>
+
+---
+
+# ⚙️ Cómo Ejecutar el Proyecto
+
+<details>
+<summary> 🐍 Crear y activar entorno virtual en Windows</summary>
+
+```bash
+# Crear entorno
 python -m venv nombre_del_entorno
-```
-2. Después activala:
-```
+
+# Activar entorno
 nombre_del_entorno\Scripts\activate
-```
-3. Por último, instala las librerias:
-```
+
+# Instalar dependencias
 pip install -r requirements.txt
-```
-4. Para desactivar el entorno:
-```
+
+# Desactivar entorno
 deactivate
-```
-# Guía de Configuración y Uso de QGIS
+````
+</details>
 
-## Descargar QGIS:
-[QGIS](https://www.qgis.org/en/site/forusers/download.html)
+<details>
+<summary> 🧭 Guía para Usar QGIS</summary>
 
-## Pluguins:
-[Multipart Split](https://plugins.qgis.org/plugins/splitmultipart/) para aprender a usarlo mirá el [video](https://www.youtube.com/watch?v=Syas8ajiQ8w), útil para crear las regiones en el paso **1_Regions**.
+## 🔽 Descargar QGIS
+👉 [qgis.org/descargar](https://www.qgis.org/en/site/forusers/download.html)
 
-[Google Maps en QGIS (Instalar complemento QuickMapService)](https://www.youtube.com/watch?v=Uvp5RmsmrSM).
+## 🧩 Plugins recomendados
 
-## Agregar XYZ Tile Layers:
-Para agregar más mapas a QGIS copia el script del archivo de texto `script_mapas.txt` que está en la carpeta **0_Parcels**.
-Después:
+- 🔀 [Multipart Split](https://plugins.qgis.org/plugins/splitmultipart/)  
+  👉 [Ver tutorial en YouTube](https://www.youtube.com/watch?v=Syas8ajiQ8w)  
+  Útil para crear las regiones en el paso **1_Regions**.
 
-1. Abrí QGIS.
-2. Abrí la consola de python que está en complementos (o Plugins) y seleccioná Consola Python. Esto va a abrir una ventana donde podés escribir y ejecutar scripts en Python directamente dentro de QGIS.
-3. Copia y pega el código del script en la consola directamente y apretá Run Script (ícono de play) en la consola para ejecutarlo.
-4. Verificá que se descargaron correctamente haciendo click en el ícono XYZ.
-5. Por último, elegí el mapa que necesites haciendo doble click en el mismo.
+- 🗺️ [QuickMapServices – Google Maps en QGIS](https://www.youtube.com/watch?v=Uvp5RmsmrSM)
+
+## 🗂️ Agregar XYZ Tile Layers
+
+Para agregar más mapas base en QGIS desde el script:
+
+1. Abrí **QGIS**.
+2. En el menú superior, andá a **Complementos** → **Consola de Python**.
+3. Copiá y pegá el código desde el archivo `0_Parcels/script_mapas.txt`.
+4. Hacé clic en **Run Script (▶️)**.
+5. Verificá que se agregaron correctamente desde el ícono **XYZ Tiles** en el panel lateral.
+6. Hacé doble clic en el mapa que quieras usar para cargarlo al lienzo.
+
+</details>
+
+---
+
+# 🖼️ Ejemplos de salida
+
+## 🏢 Huellas de Edificios
+
+Se generaron a partir de la combinación de datos de **IDEMSA (2015)** y **Google Open Buildings**, para representar la ubicación real de edificaciones en Salta.
+
+📌 Además, a estas huellas se les incorporó el indicador socioeconómico **NBI**, enriqueciendo cada edificio con información clave posterior a la integración de datos.
+
+> [!NOTE]
+> El NBI está almacenado como atributo en cada entidad, aunque no se represente visualmente en el mapa mostrado.
+
+![Ejemplo huellas de edificios](https://i.imgur.com/RGkQ29o.png)
+
+---
+
+## 📍 Places de Interés
+
+Se obtuvieron más de **27.000 registros** desde Google Places, incluyendo escuelas, hospitales, comercios y otros lugares clave.  
+Después de llevar a cabo un proceso de limpieza y clasificación, se mantuvieron **15.000 registros** con atributos estandarizados.
+
+> [!NOTE]
+> La imagen solo visualiza la ubicación de los lugares, pero además, cada uno cuenta con atributos como tipo de lugar (hospital, gimnasio, etc), barrio y NBI.
+
+![Ejemplo places](https://i.imgur.com/YirW3lj.png)
+
+---
+
+# 📚 Recursos Útiles
+
+- [QGIS – Manual Oficial](https://docs.qgis.org/3.28/es/docs/index.html)  
+- [Open Buildings Dataset – Google](https://sites.research.google/open-buildings/)  
+- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview)
+
+---
+
+# 📝 Licencia
+
+📄 Este proyecto está licenciado bajo los términos de la [MIT License](./LICENSE).
+
+---
+
+Hecho con 💻 por [Adriel Starchevich](https://www.linkedin.com/in/tu-linkedin)  
+📍 Paraná, Entre Ríos – Argentina
