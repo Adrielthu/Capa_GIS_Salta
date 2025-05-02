@@ -1,3 +1,10 @@
+> [!IMPORTANT]
+> Este proyecto fue realizado en colaboración con una institución académica y está basado en un caso real de análisis geoespacial sobre la ciudad de Salta Capital.  
+> Aunque el trabajo se desarrolló con fines académicos y simula una aplicación en un contexto profesional, **el código es libre y puede ser reutilizado o adaptado con fines educativos o personales.**  
+>  
+> 🧠 **Resumen del proyecto:** Se desarrolló un sistema de información geográfica (GIS) en Python para analizar la propagación de la Tuberculosis, aplicando técnicas de limpieza, normalización y transformación de datos geográficos.
+
+
 # Pasos importantes para la correcta ejecución de los scripts
 
 ## Librerías requeridas:
