@@ -123,5 +123,5 @@ Después de llevar a cabo un proceso de limpieza y clasificación, se mantuviero
 
 ---
 
-Hecho con 💻 por [Adriel Starchevich](https://www.linkedin.com/in/tu-linkedin)  
+Hecho con 💻 por [Adriel Starchevich](www.linkedin.com/in/adriel-starchevich)  
 📍 Paraná, Entre Ríos – Argentina
